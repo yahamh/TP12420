@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script type="text/javascript" src="script.js"></script>
+
+
 </head>
 
 
-<body >
-
+<body>
     <div class =”pagewrapper”>
         <div class="header">
             <a href="index.html" class="logo">PHAROS</a>
@@ -29,62 +30,34 @@
 
 <div id ="corps">
 
+    
+
     <div class="card card-1">
         <div id="election"> </div>
-        <div id="boutton1"> </div>
-        <div id="boutton2"> </div>
-        <div id="boutton3"> </div>
-        <div id="boutton4"> </div>
+        <div id="infoCard1"> </div>
     </div>
-
-
-
-
-    <!-- quand on choisit une option dans la partie election-->
+    
     <div class="card card-2">
         
-        <!-- quand on choisit l'option 43e élection fédérale dans la partie election-->
-        <div id="dvFederaux" >
-            <div id="titre" ></div>
-            <div id="checkbox1"></div>
-            <div id="checkbox2"></div>
-            <div id="checkbox3"></div>
-            <div id="checkbox4"></div>
-            <div id="checkbox5"></div>
-            <div id="checkbox6"></div>
-        </div>
+        <div id="dvFederaux"> <div id="titre"> </div></div>
         
-    <!-- quand on choisit l'option Élections générales provinciales dans la partie election-->
-
-        <div id="dvProvinciaux" style="display: none">
-            <div id="titre_2" ></div>
-            <div id="checkbox1_2"></div>
-            <div id="checkbox2_2"></div>
-            <div id="checkbox3_2"></div>
-            <div id="checkbox4_2"></div>
-            <div id="checkbox5_2"></div>
-            <div id="checkbox6_2"></div>
-            <div id="checkbox7_2"></div>
-        </div>
-
-
+        <div id="dvProvinciaux" style="display: none"><div id="titre2"></div></div>
+    
     </div>
-
-
-
+    
     <div class="card card-3">
         <h4> Action </h4>
-
-        <button href="#" class="button " id="submit1_button" disabled>Connaitre les propositions...</button><br><br>
-        <button href="#" class="button " id="submit2_button" disabled>Comparer les propositions...</button><br><br>
+        <button class="button" onclick="window.location.href='connaitre.html'" id="submit1_button" disabled> Connaitre les propositions... </button><br><br>
+        <button class="button" onclick="window.location.href='comparer.html'" id="submit2_button" disabled> Comparer les propositions...</button><br><br>
     </div>
+        
+
+
+    
 
 </div>
 
 
-
-
 </body>
-<script type="text/javascript" src="script.js"></script>
 </html>
 

@@ -1,0 +1,268 @@
+
+.header {
+    position: absolute;
+    background-color: #2196F3;
+    padding: 7.5px 10px;
+    width : 100%;
+    top: 0px;
+    left: 0px;
+}
+
+/* Style the header links */
+.header a {
+    font-family: "Roboto";
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* Style  logo link */
+
+.header a.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Float link section to right */
+.header-right {
+    position:absolute;
+    right:80px;
+    padding: 15px;
+    width: 70px;
+}
+.header-right2 {
+    position:absolute;
+    right:30px;
+    padding: 15px;
+    width: 70px;
+}
+
+.material-icons.md-18 {
+    font-size: 24px; color:white;
+}
+
+#div_fleche {
+    margin-left: 12%;
+    margin-top: 0px;
+    position: absolute;
+}
+
+#fleche {
+    font-family:"Material Icons";
+    font-weight:bold;
+    font-size:28px;
+    cursor: pointer;
+    color:#757575;
+    text-decoration: none;
+}
+
+/* Les classes "normal1" et "normal2" sont utilisees pour
+pouvoir distinguer les divs au fond gris des divs au fond blanc (voir le fichier JavaScript) */
+
+/* Cette classe est utilisee pour pouvoir reconnaitre un div au fond gris */
+.normal1 {
+
+}
+/* Cette classe est utilisee pour pouvoir reconnaitre un div au fond blanc */
+.normal2 {
+
+}
+
+#star_square_normal1 {
+    margin-top: 10px;
+    margin-left: 382px;
+    height : 44px;
+    width: 60px;
+    position: absolute;
+    background-color: rgba(227,227,227);
+    cursor: pointer;
+}
+
+#star_square_normal2 {
+    margin-top: 10px;
+    margin-left: 382px;
+    height : 44px;
+    width: 60px;
+    position: absolute;
+    background-color:white;
+    cursor: pointer;
+}
+
+
+#star_square_replacement {
+    margin-top: 10px;
+    margin-left: 382px;
+    height : 44px;
+    width: 60px;
+    position: absolute;
+    background-color:rgba(121, 121, 122, 1);
+    cursor: pointer;
+}
+
+#star_jaune {
+    font-family: 'Material Icons Bold', 'Material Icons Regular', 'Material Icons';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    color:#FFFF80;
+    margin-top: 3px;
+    margin-left: 11px;
+    position: absolute;
+    user-select:none;
+}
+
+#star_noire {
+    font-family: 'Material Icons';
+    font-weight: 400;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24px;
+    color:black;
+    margin-top: 12px;
+    margin-left: 18px;
+    position: absolute;
+    user-select: none;
+}
+
+body {
+    background-color: rgb(242, 242, 242, 1);
+    justify-content: space-around;
+    text-align: center;
+}
+
+#colonne_de_gauche {
+    width: 500px;
+    height:100%;
+    margin-left: 197px;
+    top: 100px;
+    float: left;
+    text-align: left;
+}
+
+#colonne_de_droite {
+    width: 500px;
+    height:100%;
+    margin-left: 715px;
+    text-align: left;
+}
+
+#colonne_de_gauche2 {
+    width: 500px;
+    height:100%;
+    top: 100px;
+    float: left;
+}
+
+#colonne_de_droite2 {
+    width: 500px;
+    height:100%;
+    float: right;
+    margin-right:19px;
+}
+
+.bloc1 {
+    display:inline-block;
+    width:494px;
+    height:72px;
+    background-color:rgba(227,227,227);
+    padding-left:10px;
+}
+
+.p1 {
+    padding-top: 12px;
+    padding-left: 12px;
+    
+}
+
+.p2 {
+    padding-top: 11px;
+    padding-left: 11px;
+}
+
+.p3 {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+h2 {
+    padding-top: 5px;
+    font-family: 'Roboto';
+    font-size: 23px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.grey_div {
+    padding-top: 5px;
+    font-family: 'Roboto';
+    font-size: 23px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.bloc2 {
+    text-align: left;
+    display:inline-block;
+    width:492px;
+    height:72px;
+    background-color:white;
+    padding-left:10px;
+    margin-left: auto;
+    margin-right: auto;
+    outline-color: grey;
+    font-size: 20px;
+    border-color:rgba(215,215,215,1);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.titre {
+    font-family: 'Roboto';
+    font-size: 20px;
+    padding-left:100px;
+}
+
+.bloc3 {
+    display:inline-block;
+    width:471px;
+    height:224px;
+    background-color:white;
+    padding: 7px 14px 8px 17px;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    border-color:rgba(215,215,215,1);
+    border-width: 1px;
+    border-style: solid;
+    text-align:left;
+}
+
+#scroll_bar{
+    height: 780px;
+    overflow: auto;
+    position: relative;
+    width:1052px;
+    margin-left: 0px;
+    margin-right: auto;
+    border-width: 1px;
+    display: inline-block;
+}
+
+
+#center {
+    padding-top: 15px;
+    padding-right:13px;
+    width: 472px;
+    padding-bottom: 0px;
+}
+
+#top {
+    display: inline-block;
+    margin-right: 12.2%;
+}
+

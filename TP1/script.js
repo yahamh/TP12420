@@ -3,126 +3,159 @@ fetch("https://log2420-serve.herokuapp.com/JSON/output.json")
         return resp.json();
       })
       .then(function(data){
-
-        // partie qui gere les infos de la carte 1
-        document.getElementById("election").innerHTML = ` <h3>Élections</h3> `
-        document.getElementById("boutton1").innerHTML = ` 
-        <input type="radio" id="chk1" name="1Choix" onclick="ShowHideDiv1()" checked>
-            <span class="nomChoix">${data.Elections[0].name}<span><br>
-                <span class="nomDetails">${data.Elections[0].date}<span>
-                    </input><br><br>
-        ` 
-        document.getElementById("boutton2").innerHTML = `
-        <input type="radio" id="chk2" name="1Choix" onclick="ShowHideDiv2()">
-            <span class="nomChoix">${data.Elections[1].name}<span><br>
-                <span class="nomDetails">${data.Elections[1].date}<span>
-                    </input><br><br>
-        ` 
-        document.getElementById("boutton3").innerHTML = ` 
-        <input type="radio" id="chk3" name="1Choix" onclick="ShowHideDiv1()">
-            <span class="nomChoix">${data.Elections[2].name}<span><br>
-                <span class="nomDetails">${data.Elections[2].date}<span>
-                    </input><br><br>
-        ` 
-        document.getElementById("boutton4").innerHTML = ` 
-        <input type="radio" id="chk4" name="1Choix" onclick="ShowHideDiv2()">
-        <span class="nomChoix">${data.Elections[3].name}<span><br>
-            <span class="nomDetails">${data.Elections[3].date}<span>
-                </input><br><br>
-        `
-
-        //partie qui gere les infos de la carte 2 sous les options " 43e élection fédérale" dans card-1
-        document.getElementById("titre").innerHTML = ` 
-        <h3 align="left">Partis politiques fédéreaux</h3>
-        `
-        document.getElementById("checkbox1").innerHTML = ` 
-        <input type="checkbox" id="connaitre1" value="1" onclick="comparerBouttons()" />
-        <span class="nomChoix">${data.PartisFederaux[0].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisFederaux[0].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox2").innerHTML = ` 
-        <input type="checkbox" id="connaitre2" value="1" onclick="comparerBouttons()" />
-        <span class="nomChoix">${data.PartisFederaux[1].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisFederaux[1].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox3").innerHTML = ` 
-        <input type="checkbox" id="connaitre3" value="1" onclick="comparerBouttons()" />
-        <span class="nomChoix">${data.PartisFederaux[2].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisFederaux[2].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox4").innerHTML = ` 
-        <input type="checkbox" id="connaitre4" value="1" onclick="comparerBouttons()" />
-        <span class="nomChoix">${data.PartisFederaux[3].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisFederaux[3].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox5").innerHTML = ` 
-        <input type="checkbox" id="connaitre5" value="1" onclick="comparerBouttons()" />
-        <span class="nomChoix">${data.PartisFederaux[4].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisFederaux[4].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox6").innerHTML = ` 
-        <input type="checkbox" id="connaitre6" value="1" onclick="comparerBouttons()" />
-        <span class="nomChoix">${data.PartisFederaux[5].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisFederaux[5].fullname}<span>
-                </input><br><br>
-        `
+        
+        document.getElementById("election").innerHTML = ` <h3>Elections</h3> `
+        document.getElementById("titre").innerHTML = ` <h3 align="left">Partis politiques fédéreaux</h3> `
+        document.getElementById("titre2").innerHTML = ` <h3 align="left">Partis politiques Provinciaux</h3> `
 
 
-        //partie qui gere les infos de la carte 2 sous les options "Élections générales provinciales" dans card-1
+        
+        for(let i = 0; i<data.Elections.length; i++){
+        
+            var div_button = document.createElement("DIV");          // Create a <DIV> node
+            div_button.setAttribute("id", `divPrincipal${i}`);
+            document.getElementById("infoCard1").appendChild(div_button); //attacher le div au body
 
-        document.getElementById("titre_2").innerHTML = ` 
-        <h3 align="left"> Partis politiques provinciaux </h3>
-        `
-        document.getElementById("checkbox1_2").innerHTML = ` 
-        <input type="checkbox" id="connaitre1_2" value="2" onclick="comparerBouttons( )" />
-        <span class="nomChoix">${data.PartisProvinciaux[0].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisProvinciaux[0].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox2_2").innerHTML = ` 
-        <input type="checkbox" id="connaitre2_2" value="2" onclick="comparerBouttons( )" />
-        <span class="nomChoix">${data.PartisProvinciaux[1].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisProvinciaux[1].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox3_2").innerHTML = ` 
-        <input type="checkbox" id="connaitre3_2" value="2" onclick="comparerBouttons( )" />
-        <span class="nomChoix">${data.PartisProvinciaux[2].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisProvinciaux[2].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox4_2").innerHTML = ` 
-        <input type="checkbox" id="connaitre4_2" value="2" onclick="comparerBouttons( )" />
-        <span class="nomChoix">${data.PartisProvinciaux[3].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisProvinciaux[3].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox5_2").innerHTML = ` 
-        <input type="checkbox" id="connaitre5_2" value="2" onclick="comparerBouttons( )" />
-        <span class="nomChoix">${data.PartisProvinciaux[4].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisProvinciaux[4].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox6_2").innerHTML = ` 
-        <input type="checkbox" id="connaitre6_2" value="2" onclick="comparerBouttons( )" />
-        <span class="nomChoix">${data.PartisProvinciaux[5].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisProvinciaux[5].fullname}<span>
-                </input><br><br>
-        `
-        document.getElementById("checkbox7_2").innerHTML = ` 
-        <input type="checkbox" id="connaitre7_2" value="2" onclick="comparerBouttons( )" />
-        <span class="nomChoix">${data.PartisProvinciaux[6].abreviation}<span><br>
-            <span class="nomDetails">${data.PartisProvinciaux[6].fullname}<span>
-                </input><br><br>
-        `
+            var button = document.createElement("input");   // Create a radio button
+            button.setAttribute("type", "radio");
+            button.setAttribute("name", "election_button");
+            button.setAttribute("id", `chk${i+1}`)
+            button.setAttribute("class", data.Elections[i].name);
+            div_button.appendChild(button);                         //attacher le bouton au div
+
+            document.getElementById(`chk${i+1}`).addEventListener("click",function(){
+            ShowHideDiv();
+        });
+
+
+        document.getElementById("chk1").checked = true; 
+
+
+        var buttonChoix = document.createElement("span");        // Create a <span> node
+        buttonChoix.innerText = data.Elections[i].name;          //donner le contenu du span
+        buttonChoix.setAttribute("class", "nomChoix");
+
+        var buttonDetails= document.createElement("span");        // Create a second <span> node
+        buttonDetails.innerText = data.Elections[i].date;         //donner le contenu du span2
+        buttonDetails.setAttribute("class", "nomDetails");
+
+        var divQuiContient = document.createElement("DIVA");          // Create a <DIV> node
+        divQuiContient.setAttribute("id", "diva");
+        document.getElementById(`divPrincipal${i}`).setAttribute("class", "divPrincipal"); //attacher le diva au div
+
+        document.getElementById(`divPrincipal${i}`).appendChild(divQuiContient); //attacher le diva au div
+  
+        divQuiContient.appendChild(buttonChoix);                         //attacher le span au diva
+  
+        divQuiContient.appendChild(buttonDetails);   
+    }
+
+               
+
+
+////////////////////////////////CARD 2////////////////////////////////////////////
+for(let i= 0; i<data.PartisFederaux.length; i++){
+
+
+          ////////////////////////////cration checkbox partis federaux /////////////////////////
+
+        var div_button2 = document.createElement("DIV2");          // Create a <DIV> node
+        div_button2.setAttribute("id", `divPrincipalb${i}`);
+
+        document.getElementById("dvFederaux").appendChild(div_button2); //attacher le div au body
+
+
+        var button2 = document.createElement("input");   // Create a radio button
+        button2.setAttribute("type", "checkbox");
+        button2.setAttribute("name", "Partis_button");
+        //button.setAttribute("text", data.Elections[i].name);
+        button2.setAttribute("id", `connaitre${i+1}`)
+        button2.setAttribute("class", data.PartisFederaux[i].abreviation);
+        div_button2.appendChild(button2);                         //attacher le bouton au div
+      
+        document.getElementById(`connaitre${i+1}`).addEventListener("click",function(){
+          comparerBouttons();
+        });
+       
+
+        var buttonChoix2 = document.createElement("span");        // Create a <span> node
+        buttonChoix2.innerText = data.PartisFederaux[i].abreviation;          //donner le contenu du span
+        buttonChoix2.setAttribute("class", "nomChoix");
+        div_button2.appendChild(buttonChoix2);                         //attacher le span au div
+
+        var buttonDetails2= document.createElement("span");        // Create a second <span> node
+        buttonDetails2.innerText = data.PartisFederaux[i].fullname;         //donner le contenu du span2
+        buttonDetails2.setAttribute("class", "nomDetails");
+        div_button2.appendChild(buttonDetails2);                         //attacher le span2 au div
 
 
 
+       
+        var divQuiContientb = document.createElement("DIVB");          // Create a <DIV> node
+        divQuiContientb.setAttribute("id", "diva");
+
+        document.getElementById(`divPrincipalb${i}`).setAttribute("class", "divPrincipal");
+
+        document.getElementById(`divPrincipalb${i}`).appendChild(divQuiContientb); //attacher le diva au div
+
+
+        divQuiContientb.appendChild(buttonChoix2);                         //attacher le span au diva
+  
+        divQuiContientb.appendChild(buttonDetails2); 
+
+
+
+
+
+
+        var div_button3 = document.createElement("DIV3");          // Create a <DIV> node
+        div_button3.setAttribute("id", `divPrincipalc${i}`);
+        document.getElementById("dvProvinciaux").appendChild(div_button3); //attacher le div au body
+
+
+        ////////////////////////////cration checkbox partis provinciaux/////////////////////////
+
+        var button2 = document.createElement("input");   // Create a radio button
+        button2.setAttribute("type", "checkbox");
+        button2.setAttribute("name", "Partis_button");
+        //button.setAttribute("text", data.Elections[i].name);
+        button2.setAttribute("id", `comparer${i+1}`)
+        button2.setAttribute("class", data.PartisProvinciaux[i].abreviation);
+        div_button3.appendChild(button2);                         //attacher le bouton au div
+        
+        document.getElementById(`comparer${i+1}`).addEventListener("click",function(){
+          comparerBouttons();
+        });
+
+        var buttonChoix2 = document.createElement("span");        // Create a <span> node
+        buttonChoix2.innerText = data.PartisProvinciaux[i].abreviation;          //donner le contenu du span
+        buttonChoix2.setAttribute("class", "nomChoix");
+        div_button3.appendChild(buttonChoix2);                         //attacher le span au div
+            
+        var buttonDetails2= document.createElement("span");        // Create a second <span> node
+        buttonDetails2.innerText = data.PartisProvinciaux[i].fullname;         //donner le contenu du span2
+        buttonDetails2.setAttribute("class", "nomDetails");
+        div_button3.appendChild(buttonDetails2);                         //attacher le span2 au div
+
+
+        
+        var divQuiContientc = document.createElement("DIVB");          // Create a <DIV> node
+        divQuiContientc.setAttribute("id", "diva");
+
+        document.getElementById(`divPrincipalc${i}`).setAttribute("class", "divPrincipal");
+
+        document.getElementById(`divPrincipalc${i}`).appendChild(divQuiContientc); //attacher le diva au div
+
+
+        divQuiContientc.appendChild(buttonChoix2);                         //attacher le span au diva
+  
+        divQuiContientc.appendChild(buttonDetails2); 
+
+
+
+
+
+      } 
 
 
 
@@ -130,58 +163,46 @@ fetch("https://log2420-serve.herokuapp.com/JSON/output.json")
 
 
 
-//<!-- JavaScript pour la selection des options-->
-function ShowHideDiv1() {
+function ShowHideDiv() {
   var chk1 = document.getElementById("chk1");
-  //var dvFederaux = document.getElementById("dvFederaux");
-  //dvFederaux.style.display = chk1.checked ? "block" : "none";
-  //dvProvinciaux.style.display = "none";
-  if (chk1) {
-     dvFederaux.style.display = "block";
-     dvProvinciaux.style.display = "none";
-   } else {
-     dvFederaux.style.display = "none";
-   }
-}
-
-function ShowHideDiv2() {
   var chk2 = document.getElementById("chk2");
-  //var dvPassport = document.getElementById("dvProvinciaux");
-  //dvProvinciaux.style.display = chk2.checked ? "block" : "none";
-  //dvFederaux.style.display = "none";
-  if (chk2) {
+  var chk3 = document.getElementById("chk3");
+  var chk4 = document.getElementById("chk4");
+  
+    if (chk1.checked || chk3.checked) {
+        dvFederaux.style.display = "block";
+        dvProvinciaux.style.display = "none";
+        console.log("cond1");
+        chk1=false;
+   } 
+   
+   if (chk2.checked || chk4.checked) {
         dvProvinciaux.style.display = "block";
         dvFederaux.style.display = "none";
-      } else {
-        dvProvinciaux.style.display = "none";
-      }
+        chk2=false;
+        console.log("cond2");
+    }
 }
 
-
-//JavaScript function that enables or disables a submit button depending
-//on whether a checkbox has been ticked or not.
 
 function comparerBouttons(termsCheckBox){
   var checked=0;
 
-  //If the checkbox has been checked
   if(connaitre1.checked){checked++;}
   if(connaitre2.checked){checked++;}
   if(connaitre3.checked){checked++;}
   if(connaitre4.checked){checked++;}
   if(connaitre5.checked){checked++;}
   if(connaitre6.checked){checked++;}
-  if(connaitre1_2.checked){checked++;}
-  if(connaitre2_2.checked){checked++;}
-  if(connaitre3_2.checked){checked++;}
-  if(connaitre4_2.checked){checked++;}
-  if(connaitre5_2.checked){checked++;}
-  if(connaitre6_2.checked){checked++;}
-  if(connaitre7_2.checked){checked++;}
-
+  
+  if(comparer1.checked){checked++;}
+  if(comparer2.checked){checked++;}
+  if(comparer3.checked){checked++;}
+  if(comparer4.checked){checked++;}
+  if(comparer5.checked){checked++;}
+  if(comparer6.checked){checked++;}
   console.log(checked);
 
-      //Set the disabled property to FALSE and enable the button.
   if (checked == 1){
       document.getElementById("submit1_button").disabled = false;
       document.getElementById("submit2_button").disabled = true;
@@ -189,7 +210,6 @@ function comparerBouttons(termsCheckBox){
       document.getElementById("submit1_button").disabled = true;
       document.getElementById("submit2_button").disabled = false;
   } else {
-      //Otherwise, disable the submit button.
       document.getElementById("submit1_button").disabled = true;
       document.getElementById("submit2_button").disabled = true;
 
@@ -198,3 +218,10 @@ function comparerBouttons(termsCheckBox){
 
 
 
+
+
+function connaitre() { 
+    var url= document.getElementById("url").value; 
+    document.write("Redirecting to the url in 3 seconds..."); 
+    setTimeout(function(){window.location = "https://www.geeksforgeeks.org/html-frame-frameborder-attribute/";}, 3000); 
+} 
