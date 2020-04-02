@@ -73,13 +73,17 @@
 pouvoir distinguer les divs au fond gris des divs au fond blanc (voir le fichier JavaScript) */
 
 /* Cette classe est utilisee pour pouvoir reconnaitre un div au fond gris */
+/*
 .normal1 {
 
 }
+*/
 /* Cette classe est utilisee pour pouvoir reconnaitre un div au fond blanc */
+/*
 .normal2 {
 
 }
+*/
 
 #star_square_normal1 {
     margin-top: 15px;

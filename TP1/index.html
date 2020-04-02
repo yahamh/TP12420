@@ -14,7 +14,7 @@
 
 
 <body>
-    <div class =”pagewrapper”>
+    <div class=”pagewrapper”>
         <div class="header">
             <a href="index.html" class="logo">PHAROS</a>
 
@@ -26,38 +26,103 @@
                 <i class="material-icons md-18">more_vert</i>
             </div>
         </div>
-    </div> 
-
-<div id ="corps">
-
-    
-
-    <div class="card card-1">
-        <div id="election"> </div>
-        <div id="infoCard1"> </div>
     </div>
-    
-    <div class="card card-2">
-        
-        <div id="dvFederaux"> <div id="titre"> </div></div>
-        
-        <div id="dvProvinciaux" style="display: none"><div id="titre2"></div></div>
-    
+
+    <div id="corps">
+
+
+
+        <div class="card cardformat card-1">
+            <div id="election"> </div>
+            <div id="infoCard1"> </div>
+        </div>
+
+        <div class="card cardformat card-2">
+
+            <div id="dvFederaux">
+                <div id="titre"> </div>
+            </div>
+
+            <div id="dvProvinciaux" style="display: none">
+                <div id="titre2"></div>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="cardbis cardformat card-4">
+                <div id="sujetsDiv">
+                    <div id="sujetHeader">
+                        <div id = "sujetTitle">
+                            <h3> Sujets </h3>
+                        </div>
+                        <div id = "checkboxSelectAllSujets">
+                            <label class="sujetsLabel">
+                                <input id = "SelectDeselectAllSujets" type="checkbox" value="select/deselect All" checked = "checked"> Tout sélectionner/ désélectionner
+                            </label>
+                        </div>
+                    </div>
+                    <div class="divSujetsCheckbox">
+                        <label class="sujetsLabel">
+                            <input class="sujetsCheckbox" type="checkbox" value="Environnement" checked = "checked"/> Environnement
+                        </label>
+                    </div>
+                    <div class="divSujetsCheckbox">
+                        <label class="sujetsLabel">
+                            <input class="sujetsCheckbox" type="checkbox" value="Education" checked = "checked"/> Education
+                        </label>
+                    </div>
+                    <div class="divSujetsCheckbox">
+                        <label class="sujetsLabel">
+                            <input class="sujetsCheckbox" type="checkbox" value="Santé et services sociaux" checked = "checked"/> Santé et services sociaux
+                        </label>
+                    </div>
+                    <div class="divSujetsCheckbox">
+                        <label class="sujetsLabel">
+                            <input class="sujetsCheckbox" type="checkbox" value="Arts et culture" checked = "checked"/> Arts et culture
+                        </label>
+                    </div>
+                    <div class="divSujetsCheckbox">
+                        <label class="sujetsLabel">
+                            <input class="sujetsCheckbox" type="checkbox" value="Transport" checked = "checked"/> Transport
+                        </label>
+                    </div>
+                    <div class="divSujetsCheckbox">
+                        <label class="sujetsLabel">
+                            <input class="sujetsCheckbox" type="checkbox" value="Energie" checked = "checked"/> Energie
+                        </label>
+                    </div>
+                    <div class="divSujetsCheckbox">
+                        <label class="sujetsLabel">
+                            <input class="sujetsCheckbox" type="checkbox" value="Immigration" checked = "checked"/> Immigration
+                        </label>
+                    </div>
+                    <div class="divSujetsCheckbox">
+                        <label class="sujetsLabel">
+                            <input class="sujetsCheckbox" type="checkbox" value="Economie" checked = "checked"/> Economie
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardbis cardformat-2 card-3">
+                <div id="actionDiv">
+                    <h4> Action </h4>
+                    <button class="button" onclick="window.location.href='connaitre.html'" id="submit1_button" disabled>
+                        Connaitre les propositions... </button><br>
+                    <button class="button" onclick="window.location.href='comparer.html'" id="submit2_button" disabled>
+                        Comparer les propositions...</button><br>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     </div>
-    
-    <div class="card card-3">
-        <h4> Action </h4>
-        <button class="button" onclick="window.location.href='connaitre.html'" id="submit1_button" disabled> Connaitre les propositions... </button><br><br>
-        <button class="button" onclick="window.location.href='comparer.html'" id="submit2_button" disabled> Comparer les propositions...</button><br><br>
-    </div>
-        
-
-
-    
-
-</div>
 
 
 </body>
-</html>
 
+</html>
