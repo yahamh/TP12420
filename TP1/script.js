@@ -185,6 +185,18 @@ fetch("https://log2420-serve.herokuapp.com/JSON/output.json")
             comparerBouttons(0, 0);
           });
         }
+
+        
+        var checkboxEnvironnement = document.getElementById("checkboxEnvironnement").checked;
+        var checkboxEducation = document.getElementById("checkboxEducation").checked;
+        var checkboxSante = document.getElementById("checkboxSante").checked;
+        var checkboxArts = document.getElementById("checkboxArts").checked;
+        var checkboxTransport = document.getElementById("checkboxTransport").checked;
+        var checkboxEnergie = document.getElementById("checkboxEnergie").checked;
+        var checkboxImmigration = document.getElementById("checkboxImmigration").checked;
+        var checkboxEconomie = document.getElementById("checkboxEconomie").checked;
+        
+        
 });
 
 
@@ -209,6 +221,7 @@ function ShowHideDiv() {
         console.log("cond2");
     }
 }
+
 
 /*
 function activateDesactivateButtons() {
@@ -252,7 +265,6 @@ function comparerBouttons(i, j){
     if (connaitre5.checked) { checked++; }
     if (connaitre6.checked) { checked++; }
 
-
     if (comparer1.checked) { checked++; }
     if (comparer2.checked) { checked++; }
     if (comparer3.checked) { checked++; }
@@ -274,9 +286,6 @@ function comparerBouttons(i, j){
     }
   }
 }
-
-
-
 
 
 function connaitre() { 

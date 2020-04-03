@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <script type="text/javascript" src="script.js"></script>
+   
 
 
 </head>
@@ -28,10 +28,12 @@
         </div>
     </div>
 
+    <div class = "sidemenu"> 
+        <a href="#"  style="background-color:lightgrey;" > Partis</a>
+        <a href="#"> Candidats</a>
+    </div>
+
     <div id="corps">
-
-
-
         <div class="card cardformat card-1">
             <div id="election"> </div>
             <div id="infoCard1"> </div>
@@ -48,7 +50,6 @@
             </div>
 
         </div>
-
         <div class="card">
             <div class="cardbis cardformat card-4">
                 <div id="sujetsDiv">
@@ -58,48 +59,57 @@
                         </div>
                         <div id = "checkboxSelectAllSujets">
                             <label class="sujetsLabel">
-                                <input id = "SelectDeselectAllSujets" type="checkbox" value="select/deselect All" checked = "checked"> Tout sélectionner/ désélectionner
+                                <input id = "SelectDeselectAllSujets" type="checkbox" value="select/deselectAll" checked = "checked"> Tout sélectionner/ désélectionner
                             </label>
                         </div>
                     </div>
+                    <form>
                     <div class="divSujetsCheckbox">
                         <label class="sujetsLabel">
-                            <input class="sujetsCheckbox" type="checkbox" value="Environnement" checked = "checked"/> Environnement
+                            <input class="sujetsCheckbox" type="checkbox" value="Environnement" checked="checked"
+                                id="checkboxEnvironnement" /> Environnement
                         </label>
                     </div>
                     <div class="divSujetsCheckbox">
                         <label class="sujetsLabel">
-                            <input class="sujetsCheckbox" type="checkbox" value="Education" checked = "checked"/> Education
+                            <input class="sujetsCheckbox" type="checkbox" value="Education" checked="checked" id="checkboxEducation" />
+                            Education
                         </label>
                     </div>
                     <div class="divSujetsCheckbox">
                         <label class="sujetsLabel">
-                            <input class="sujetsCheckbox" type="checkbox" value="Santé et services sociaux" checked = "checked"/> Santé et services sociaux
+                            <input class="sujetsCheckbox" type="checkbox" value="Santé et services sociaux" checked="checked"
+                                id="checkboxSante" /> Santé et services sociaux
                         </label>
                     </div>
                     <div class="divSujetsCheckbox">
                         <label class="sujetsLabel">
-                            <input class="sujetsCheckbox" type="checkbox" value="Arts et culture" checked = "checked"/> Arts et culture
+                            <input class="sujetsCheckbox" type="checkbox" value="Arts et culture" checked="checked" id="checkboxArts" />
+                            Arts et culture
                         </label>
                     </div>
                     <div class="divSujetsCheckbox">
                         <label class="sujetsLabel">
-                            <input class="sujetsCheckbox" type="checkbox" value="Transport" checked = "checked"/> Transport
+                            <input class="sujetsCheckbox" type="checkbox" value="Transport" checked="checked" id="checkboxTransport" />
+                            Transport
                         </label>
                     </div>
                     <div class="divSujetsCheckbox">
                         <label class="sujetsLabel">
-                            <input class="sujetsCheckbox" type="checkbox" value="Energie" checked = "checked"/> Energie
+                            <input class="sujetsCheckbox" type="checkbox" value="Energie" checked="checked" id="checkboxEnergie" />
+                            Energie
                         </label>
                     </div>
                     <div class="divSujetsCheckbox">
                         <label class="sujetsLabel">
-                            <input class="sujetsCheckbox" type="checkbox" value="Immigration" checked = "checked"/> Immigration
+                            <input class="sujetsCheckbox" type="checkbox" value="Immigration" checked="checked" id="checkboxImmigration" />
+                            Immigration
                         </label>
                     </div>
                     <div class="divSujetsCheckbox">
                         <label class="sujetsLabel">
-                            <input class="sujetsCheckbox" type="checkbox" value="Economie" checked = "checked"/> Economie
+                            <input class="sujetsCheckbox" type="checkbox" value="Economie" checked="checked" id="checkboxEconomie" />
+                            Economie
                         </label>
                     </div>
                 </div>
@@ -108,21 +118,14 @@
             <div class="cardbis cardformat-2 card-3">
                 <div id="actionDiv">
                     <h4> Action </h4>
-                    <button class="button" onclick="window.location.href='connaitre.html'" id="submit1_button" disabled>
+                    <button class="button" onclick="window.location.href='connaitre.html'", true" id="submit1_button" disabled>
                         Connaitre les propositions... </button><br>
                     <button class="button" onclick="window.location.href='comparer.html'" id="submit2_button" disabled>
                         Comparer les propositions...</button><br>
                 </div>
             </div>
         </div>
-
-
-
-
-
     </div>
-
-
 </body>
-
+<script type="text/javascript" src="script.js"></script>
 </html>
